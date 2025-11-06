@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Aparna - Portfolio</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Header -->
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="home.html"><i class="fas fa-home me-2"></i>Home</a>
+            <a href="about.html"><i class="fas fa-user me-2"></i>About</a>
+            <a href="projects.html"><i class="fas fa-laptop-code me-2"></i>Projects</a>
+            <a href="contact.html"><i class="fas fa-envelope me-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- About Section -->
+        <div class="about-section animate-on-scroll">
+            <img src="image.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="about-text">
+                <h2>Hi, I'm Aparna!</h2>
+                <p>
+                    I'm a passionate Computer Science student who blends creativity with technology. From coding web apps and managing events to public speaking and doing artistic works, I enjoy wearing many hats.
+                </p>
+                <p>
+                    I thrive in communities, organize cultural and tech events, and always seek new ways to grow and connect with people.
+                </p>
+                <a href="resume.pdf" class="btn-resume" download>
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section skills animate-on-scroll">
+            <h3><i class="fas fa-cogs me-2"></i>Skills & Interests</h3>
+            <ul class="skills-grid">
+                <li class="skill-item"><i class="fas fa-code me-2"></i>Web Development</li>
+                <li class="skill-item"><i class="fas fa-microphone me-2"></i>Public Speaking</li>
+                <li class="skill-item"><i class="fas fa-calendar-alt me-2"></i>Event Management</li>
+                <li class="skill-item"><i class="fab fa-python me-2"></i>Python</li>
+                <li class="skill-item"><i class="fas fa-copyright me-2"></i>C</li>
+                <li class="skill-item"><i class="fas fa-plus me-2"></i>C++</li>
+                <li class="skill-item"><i class="fas fa-users me-2"></i>Team Leadership</li>
+                <li class="skill-item"><i class="fas fa-bullhorn me-2"></i>Outreach</li>
+                <li class="skill-item"><i class="fas fa-pen-fancy me-2"></i>Creative Writing</li>
+                <li class="skill-item"><i class="fas fa-paint-brush me-2"></i>UI/UX Basics</li>
+            </ul>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="section animate-on-scroll">
+            <h3><i class="fas fa-briefcase me-2"></i>Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Executive – Alfaaz, Rangezz 2K24</h4>
+                    <p>Executive in open mic events and contributed to cultural management.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Outreach Executive – Coding Ninjas</h4>
+                    <p>Promoted workshops, tech talks, and managed campus outreach.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Executive in events of Office of Student Affairs</h4>
+                    <p>Managed, Promoted and organised 10+ events.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="section extras animate-on-scroll">
+            <h3><i class="fas fa-star me-2"></i>Fun Facts</h3>
+            <div class="fun-facts">
+                <ul>
+                    <li><i class="fas fa-coffee me-2"></i>☕ Codes with a cup of chai!</li>
+                    <li><i class="fas fa-book me-2"></i>📚 Loves literature events, especially poetry readings.</li>
+                    <li><i class="fas fa-microphone-alt me-2"></i>🎤 Loves organising and planning events.</li>
+                    <li><i class="fas fa-brain me-2"></i>🧠 Loves mixing tech with creativity.</li>
+                </ul>
+            </div>
+
+            <div class="quote">
+                Little steps, strong tea, and steady dreams — that's how I go.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.page-loader').style.opacity = '0';
+                setTimeout(() => {
+                    document.querySelector('.page-loader').style.display = 'none';
+                }, 500);
+            }, 800);
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            if (body.classList.contains('dark-theme')) {
+                icon.className = 'fas fa-sun';
+                body.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)';
+            } else {
+                icon.className = 'fas fa-moon';
+                body.style.background = 'var(--primary-gradient)';
+            }
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Floating Particles Effect
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'floating-particle';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 15000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 2000);
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.bg-animation');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Enhanced hover effects for timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(15px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0) scale(1)';
+            });
+        });
+
+        // Skill items animation on hover
+        document.querySelectorAll('.skill-item').forEach((skill, index) => {
+            skill.style.animationDelay = `${index * 0.1}s`;
+            
+            skill.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.05)';
+            });
+            
+            skill.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Quote animation
+        const quote = document.querySelector('.quote');
+        if (quote) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 1s ease forwards';
+                    }
+                });
+            });
+            observer.observe(quote);
+        }
+
+        // Button ripple effect
+        const resumeBtn = document.querySelector('.btn-resume');
+        resumeBtn.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.6);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                left: ${x}px;
+                top: ${y}px;
+                width: ${size}px;
+                height: ${size}px;
+            `;
+            
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                // Add a subtle click animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating image</title>
+<style>
+body,html{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(1, 1, 1);
+    }
+.container{
+    display: relative;
+    
+}
+.rotating-image{
+    width: 200px;
+    height: auto;
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+    <div class=" container">
+        <div class="rotating-image">
+        <img src="https://immerse-cdn.promeai.pro/site/img/home/15.webp" alt=" rotating image" height="200" width="200"></div>
+    </div>
+    
+</body>
+</html>

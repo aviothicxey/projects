@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(155deg, #000000, #3182ce);
+    min-height: 100vh;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+
+aside {
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.profile h2 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.profile p {
+    background-color: #f0f3f6;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+
+@media (min-width: 992px) {
+    aside {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .profile,
+    .monthly-income,
+    nav {
+        margin: 0;
+    }
+
+    .profile {
+        text-align: left;
+    }
+
+    .monthly-income {
+        flex: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    nav .nav-item {
+        margin: 0;
+    }
+}
+
+
+.chart-container {
+    width: 100%;
+    height: 400px;
+}
+
+@media (min-width: 992px) {
+    .chart-container {
+        height: 500px;
+        
+    }
+
+    main .row>.col-12 {
+        margin-bottom: 30px;
+        
+    }
+}
+
+main {
+    margin-top: 20px;
+    
+}
+
+body {
+    padding: 0 20px;
+   
+}
+
+
+@media (min-width: 992px) {
+    .row.g-3.mb-4 {
+        flex-wrap: nowrap;
+        gap: 20px;
+       
+    }
+
+    #income,
+    #expenses,
+    #balance,
+    #transaction {
+        flex: 1;
+        
+        max-width: 24%;
+        
+    }
+
+    .card {
+        height: auto;
+       
+    }
+}
+
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #3182ce;
+    color: white;
+    font-weight: 500;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #3182ce;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+
+    #income,
+    #expenses,
+    #balance,
+    #transaction {
+        margin: 10px auto;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .chart-container {
+        height: 300px;
+    }
+
+    .table-responsive {
+        margin: 15px 0;
+    }
+}
+
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #3182ce;
+    border-color: #3182ce;
+}
+
+.btn-primary:hover {
+    background-color: #2c5282;
+    border-color: #2c5282;
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.monthly-income {
+    background-color: #f8fafc;
+    border-radius: 10px;
+    padding: 15px 0;
+    margin: 0 10px;
+}
+
+.monthly-income h4 {
+    color: #3182ce;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.monthly-income span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2d3748;
+}

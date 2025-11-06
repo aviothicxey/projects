@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background:linear-gradient(155deg,#000000,#3182ce);
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #fff;
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.profile h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.profile p {
+    background-color: #f0f3f6;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e5efff;
+    color: #000;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.summary-cards {
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+   
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #888;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.income p {
+    color: #4299e1;
+}
+
+.expenses p {
+    color: #e53e3e;
+}
+
+.balance p {
+    color: #48bb78;
+}
+
+.transactions p {
+    color: #4fd1c5;
+}
+
+.date-range {
+    font-size: 14px;
+    color: #888;
+}
+
+.expenses-chart {
+    background-color: #fff;
+    padding: 20px;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 1220px;
+}
+.two{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.two img{
+    margin-top: 20px;
+}
+.balance1{
+    background-color: #fff;
+    padding: 20px;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    width: 600px;
+}
+.expense{
+    background-color: #fff;
+    padding: 20px;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.expenses-chart h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.chart {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+.chart img{
+    max-width: 100% ;
+}
+.balance2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.balance2 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.sidebar{
+    border-radius: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sidebar {
+    width: 250px; 
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+main {
+    flex: 1; 
+    padding: 20px;
+}
+
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .div{padding: 0;
+        margin: 10;
+        border: 10;
+        max-width: 100%;
+        
+    }
+ 
+    .container {
+        flex-direction: column;
+    }
+
+   
+    .sidebar {
+        width: 100%; 
+        padding: 10px;
+    }
+
+   
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr); 
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+
+   
+    .two {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .balance1,.expense {
+        width: 100%; 
+        text-align: center;
+    }
+
+  
+    #balanceimg, #expenseimg {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+
+
+

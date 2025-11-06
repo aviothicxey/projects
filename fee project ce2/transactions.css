@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+   
+}
+
+h1, h4 {
+    color: #3182ce;
+}
+
+table th, table td {
+    text-align: center;
+}
+
+.table th {
+    background-color: #3182ce;
+}
+
+.btn {
+    margin: 0 5px;
+}
+
+.modal-body input, .modal-body select {
+    margin-bottom: 15px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+tr{
+    text-align: center;
+    color: black;
+}
+.coffee{
+    color: white;
+}

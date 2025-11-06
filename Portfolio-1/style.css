@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 4px solid #1e1e2f;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+footer .socials a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .socials a:hover {
+    text-decoration: underline;
+    color: palevioletred;
+}
+
+
+.dark-mode {
+    background-color: #1e1e2f;
+    color: white;
+}
+
+.dark-mode p,
+.dark-mode h2 {
+    color: white;
+}
+
+.dark-mode .btn {
+    background-color: white;
+    color: #1e1e2f;
+}
+
+.dark-mode .btn:hover {
+    background-color: #ddd;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typeWriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Apply animation to elements */
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ff4081;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+h2.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #1e1e2f;
+    white-space: nowrap;
+    animation: typeWriter 3s steps(30) 1 normal both;
+    width: 0;
+}
+body.bg-dark a {
+    color: #ffc107;
+}
+
+
