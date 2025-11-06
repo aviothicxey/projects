@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b305a76080.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo (1).png" alt="Logo" class="logo">
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Welcome to My Portfolio</p>
+                <h1>Hi, I'm <span>Aparna</span><br>I'm from India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------about---------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class = "sub-title">About Me</h1>
+                    <p>I’m a Computer Science Engineering student passionate about both technology and 
+                        people. Alongside building technical projects, I’ve gained experience in event
+                        management, public speaking, and outreach, where I enjoy 
+                        leading teams and creating engaging experiences. With strengths in communication, leadership,
+                        problem-solving, I aim to connect my 
+                        technical knowledge with people-focused roles that make a 
+                        meaningful impact.</p>
+
+                        <div class="tab-titles">
+                            <p class = "tab-links active-link" onclick="openTab('skills')">Skills</p>
+                            <p class = "tab-links" onclick="openTab('experiences')">Experiences</p>
+                            <p class = "tab-links" onclick="openTab('education')">Education</p>
+                        </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>JavaScript</span><br>Beginner</li>   
+                            <li> <span>Python</span><br>Intermediate</li>
+                            <li> <span>Java</span><br>Intermediate</li>
+                            <li> <span>C++</span><br>Intermediate</li>
+                        </ul>
+                       </div> 
+                       <div class="tab-contents" id="experiences">
+                    <ul>
+                         <li>
+                         <span>Event Coordinator</span> (Mar 2025 – Present) | Coding Ninjas  
+                         <br>Coordinated <b>Paradox</b>, a multi-level treasure hunt for 1st & 2nd-year CSE students.  
+                         <br><i>Planned puzzles & event flow, managed logistics & outreach, coordinated volunteers, guided participants, and resolved on-ground challenges.</i>
+                         </li>
+
+                         <li>
+                         <span>Outreach Executive</span> (Mar 2025 – Jul 2025) | Coding Ninjas  
+                         <br><i>Promoted coding workshops and engaged students through outreach campaigns to boost event participation.</i>
+                         </li>
+
+                          <li>
+                         <span>Executive</span> (Dec 2024 – Present) | Literayllis, Chitkara University  
+                         <br>Active member in cultural & literary initiatives including <b>Alfaaz</b> (Rangezz 2K24 & Episode 5), Love Fest, and World Poetry Day.  
+                         <br><i>Handled promotions, outreach, discipline, and coordination; co-anchored Debate & Declamation Competition; strengthened event execution, teamwork, and communication skills.</i>
+                         </li>
+                    </ul>
+                         </div> 
+            <div class="tab-contents"id="education">
+            <ul>
+              <li><span>B.E. Computer Science Engineering</span> (2024 – 2028) | Chitkara University, Punjab</li>
+              <li><span>Senior Secondary (XII)</span> | CBSE Board — PCM with Computer Science</li>
+              <li><span>Secondary (X)</span> | CBSE Board</li>
+            </ul>
+
+                       </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------services----------------   -->
+     <div id="services">
+        <div class="container">
+            <h1 class = "sub-title">My services</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Creating responsive and user-friendly websites.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <h2>App Development</h2>
+                    <p>Building mobile applications for Android and iOS.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing intuitive and engaging user interfaces.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+        <!-- ----------portfolio----------------   -->
+         <div id="portfolio">
+            <div class="container">
+                <h1 class = "sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work1.jpg" alt="Work 1">
+                        <div class="layer">
+                            <h3>Project Title 1</h3>
+                            <p>Description for Project Title 1</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work3.jpg" alt="Work 2">
+                        <div class="layer">
+                            <h3>Project Title 2</h3>
+                            <p>Description for Project Title 2</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work3.jpg" alt="Work 3">
+                        <div class="layer">
+                            <h3>Project Title 3</h3>
+                            <p>Description for Project Title 3</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">View All Projects</a>
+            </div>
+         </div>
+         <!-- ---------------contact---------------- -->
+          <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="cont-left">
+                        <h1 class = "sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +1234567890</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="#" download class="btn btn2">download my resume</a>
+                    </div>
+                    <div class="cont-right">
+                        <form >
+                           <input type="text" name="Name" placeholder="Your Name" required>
+                           <input type="email" name="email" placeholder="Your Email" required>
+                           <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                           <button type="submit" class="btn btn2">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Copyright @ Aparna . Made with <i class="fa-solid fa-heart"></i></p>
+            </div>
+          </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function openTab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu= document.getElementById("MenuItems");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
