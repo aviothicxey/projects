@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations - Shri Shyam Dharamshala</title>
+    <link rel="stylesheet" href="accomodations.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🙏</span>
+                <span class="logo-text">Shri Shyam</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a>
+                <a href="about.html" class="nav-link" data-en="About Us" data-hi="हमारे बारे में">About Us</a>
+                <a href="accommodations.html" class="nav-link active" data-en="Accommodations" data-hi="आवास">Accommodations</a>
+                <a href="attractions.html" class="nav-link" data-en="Attractions" data-hi="आकर्षण">Attractions</a>
+                <a href="gallery.html" class="nav-link" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+                <a href="donations.html" class="nav-link" data-en="Donations" data-hi="दान">Donations</a>
+                <a href="contact.html" class="nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle" title="Toggle Language">
+                    <span class="lang-icon">🌐</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-accom">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-accom">
+            <h1 class="hero-title" data-en="Comfortable Accommodations" data-hi="आरामदायक आवास">
+                Comfortable Accommodations
+            </h1>
+            <p class="hero-subtitle" data-en="Choose from our range of rooms designed for your comfort and spiritual journey" data-hi="अपने आराम और आध्यात्मिक यात्रा के लिए डिज़ाइन किए गए कमरों की श्रृंखला चुनें">
+                Choose from our range of rooms designed for your comfort and spiritual journey
+            </p>
+        </div>
+    </section>
+
+    <!-- ROOM TYPES SECTION -->
+    <section class="room-types">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Room Types" data-hi="हमारे कमरे के प्रकार">Our Room Types</h2>
+            
+            <div class="rooms-grid">
+                <!-- Single Room -->
+                <div class="room-card" data-room="single">
+                    <div class="room-image-placeholder">
+                        <span>🛏️</span>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title" data-en="Single Room" data-hi="सिंगल रूम">Single Room</h3>
+                        <p class="room-occupancy" data-en="👤 1 Person" data-hi="👤 1 व्यक्ति">👤 1 Person</p>
+                        
+                        <div class="room-amenities">
+                            <p class="amenity-label" data-en="Amenities:" data-hi="सुविधाएं:">Amenities:</p>
+                            <ul class="amenities-list">
+                                <li data-en="Single bed with premium bedding" data-hi="प्रीमियम बिस्तर के साथ सिंगल बेड">🛏️ Single bed with premium bedding</li>
+                                <li data-en="Attached bathroom with hot water" data-hi="गर्म पानी के साथ संलग्न बाथरूम">🚿 Attached bathroom with hot water</li>
+                                <li data-en="WiFi & Study table" data-hi="वाईफाई और अध्ययन मेज">📡 WiFi & Study table</li>
+                                <li data-en="AC & Fan with temperature control" data-hi="तापमान नियंत्रण के साथ एसी और पंखा">❄️ AC & Fan with temperature control</li>
+                                <li data-en="24/7 room service" data-hi="24/7 कमरे की सेवा">🔔 24/7 room service</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price-label" data-en="Price per Night:" data-hi="प्रति रात मूल्य:">Price per Night:</span>
+                                <span class="price-amount">₹500-700</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-book" data-en="Book Now" data-hi="अभी बुक करें">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Double Room -->
+                <div class="room-card" data-room="double">
+                    <div class="room-badge">Popular</div>
+                    <div class="room-image-placeholder">
+                        <span>🛏️🛏️</span>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title" data-en="Double Room" data-hi="डबल रूम">Double Room</h3>
+                        <p class="room-occupancy" data-en="👥 2 Persons" data-hi="👥 2 व्यक्ति">👥 2 Persons</p>
+                        
+                        <div class="room-amenities">
+                            <p class="amenity-label" data-en="Amenities:" data-hi="सुविधाएं:">Amenities:</p>
+                            <ul class="amenities-list">
+                                <li data-en="Double bed with luxury bedding" data-hi="लक्जरी बिस्तर के साथ डबल बेड">🛏️ Double bed with luxury bedding</li>
+                                <li data-en="Spacious attached bathroom" data-hi="विशाल संलग्न बाथरूम">🚿 Spacious attached bathroom</li>
+                                <li data-en="Premium WiFi & Work desk" data-hi="प्रीमियम वाईफाई और कार्य डेस्क">📡 Premium WiFi & Work desk</li>
+                                <li data-en="AC with individual control" data-hi="व्यक्तिगत नियंत्रण के साथ एसी">❄️ AC with individual control</li>
+                                <li data-en="Television & Sofa seating" data-hi="टेलीविजन और सोफा बैठने की व्यवस्था">📺 Television & Sofa seating</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price-label" data-en="Price per Night:" data-hi="प्रति रात मूल्य:">Price per Night:</span>
+                                <span class="price-amount">₹800-1200</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-book" data-en="Book Now" data-hi="अभी बुक करें">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Family Suite -->
+                <div class="room-card" data-room="family">
+                    <div class="room-image-placeholder">
+                        <span>🏠</span>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title" data-en="Family Suite" data-hi="परिवार सुइट">Family Suite</h3>
+                        <p class="room-occupancy" data-en="👨‍👩‍👧‍👦 4-6 Persons" data-hi="👨‍👩‍👧‍👦 4-6 व्यक्ति">👨‍👩‍👧‍👦 4-6 Persons</p>
+                        
+                        <div class="room-amenities">
+                            <p class="amenity-label" data-en="Amenities:" data-hi="सुविधाएं:">Amenities:</p>
+                            <ul class="amenities-list">
+                                <li data-en="2 bedrooms with quality beds" data-hi="गुणवत्ता वाले बिस्तर के साथ 2 बेडरूम">🛏️ 2 bedrooms with quality beds</li>
+                                <li data-en="2 attached bathrooms" data-hi="2 संलग्न बाथरूम">🚿 2 attached bathrooms</li>
+                                <li data-en="Living area with seating" data-hi="बैठने की व्यवस्था के साथ रहने का क्षेत्र">🛋️ Living area with seating</li>
+                                <li data-en="Full AC & Fan system" data-hi="पूर्ण एसी और पंखा प्रणाली">❄️ Full AC & Fan system</li>
+                                <li data-en="Kitchenette & Dining table" data-hi="किचनेट और डाइनिंग टेबल">🍽️ Kitchenette & Dining table</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price-label" data-en="Price per Night:" data-hi="प्रति रात मूल्य:">Price per Night:</span>
+                                <span class="price-amount">₹1500-2000</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-book" data-en="Book Now" data-hi="अभी बुक करें">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section class="facilities-accom">
+        <div class="container">
+            <h2 class="section-title" data-en="Common Facilities" data-hi="सामान्य सुविधाएं">Common Facilities</h2>
+            
+            <div class="facilities-showcase">
+                <div class="facility-showcase-item">
+                    <div class="facility-icon">🙏</div>
+                    <h3 data-en="Prayer Hall" data-hi="प्रार्थना कक्ष">Prayer Hall</h3>
+                    <p data-en="Dedicated meditation and prayer space with temple vibes" data-hi="मंदिर के माहौल के साथ समर्पित ध्यान और प्रार्थना स्थान">Dedicated meditation and prayer space with temple vibes</p>
+                </div>
+
+                <div class="facility-showcase-item">
+                    <div class="facility-icon">🍽️</div>
+                    <h3 data-en="Dining Area" data-hi="भोजन क्षेत्र">Dining Area</h3>
+                    <p data-en="Comfortable dining hall serving vegetarian meals" data-hi="शाकाहारी भोजन परोसने वाला आरामदायक डाइनिंग हॉल">Comfortable dining hall serving vegetarian meals</p>
+                </div>
+
+                <div class="facility-showcase-item">
+                    <div class="facility-icon">📚</div>
+                    <h3 data-en="Library" data-hi="पुस्तकालय">Library</h3>
+                    <p data-en="Collection of spiritual and religious books" data-hi="आध्यात्मिक और धार्मिक पुस्तकों का संग्रह">Collection of spiritual and religious books</p>
+                </div>
+
+                <div class="facility-showcase-item">
+                    <div class="facility-icon">🌿</div>
+                    <h3 data-en="Garden & Courtyard" data-hi="बाग और आंगन">Garden & Courtyard</h3>
+                    <p data-en="Peaceful green spaces for relaxation and reflection" data-hi="विश्राम और चिंतन के लिए शांतिपूर्ण हरी जगहें">Peaceful green spaces for relaxation and reflection</p>
+                </div>
+
+                <div class="facility-showcase-item">
+                    <div class="facility-icon">🏥</div>
+                    <h3 data-en="First Aid Room" data-hi="प्राथमिक चिकित्सा कक्ष">First Aid Room</h3>
+                    <p data-en="Medical assistance available 24/7" data-hi="चिकित्सा सहायता 24/7 उपलब्ध">Medical assistance available 24/7</p>
+                </div>
+
+                <div class="facility-showcase-item">
+                    <div class="facility-icon">🚗</div>
+                    <h3 data-en="Parking Area" data-hi="पार्किंग क्षेत्र">Parking Area</h3>
+                    <p data-en="Secure parking for vehicles" data-hi="वाहनों के लिए सुरक्षित पार्किंग">Secure parking for vehicles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Book Your Stay" data-hi="अपना प्रवास बुक करें">Book Your Stay</h2>
+            
+            <div class="booking-container">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                        <input type="text" id="guestName" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-en="Email" data-hi="ईमेल">Email</label>
+                        <input type="email" id="guestEmail" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-en="Phone Number" data-hi="फोन नंबर">Phone Number</label>
+                        <input type="tel" id="guestPhone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-en="Check-in Date" data-hi="चेक-इन तारीख">Check-in Date</label>
+                            <input type="date" id="checkInDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-en="Check-out Date" data-hi="चेक-आउट तारीख">Check-out Date</label>
+                            <input type="date" id="checkOutDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-en="Room Type" data-hi="कमरे का प्रकार">Room Type</label>
+                        <select id="roomType" required>
+                            <option value="">Select a room type</option>
+                            <option value="single" data-en="Single Room - ₹500-700/night" data-hi="सिंगल रूम - ₹500-700/रात">Single Room - ₹500-700/night</option>
+                            <option value="double" data-en="Double Room - ₹800-1200/night" data-hi="डबल रूम - ₹800-1200/रात">Double Room - ₹800-1200/night</option>
+                            <option value="family" data-en="Family Suite - ₹1500-2000/night" data-hi="परिवार सुइट - ₹1500-2000/रात">Family Suite - ₹1500-2000/night</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-en="Number of Guests" data-hi="मेहमानों की संख्या">Number of Guests</label>
+                        <input type="number" id="guestCount" min="1" max="6" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-en="Special Requests" data-hi="विशेष अनुरोध">Special Requests (Optional)</label>
+                        <textarea id="specialRequests" placeholder="Let us know your special requirements..." rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit" data-en="Confirm Booking" data-hi="बुकिंग की पुष्टि करें">Confirm Booking</button>
+                </form>
+
+                <div class="booking-info">
+                    <div class="info-card">
+                        <h3 data-en="Booking Policy" data-hi="बुकिंग नीति">Booking Policy</h3>
+                        <ul>
+                            <li data-en="Advance booking recommended" data-hi="अग्रिम बुकिंग की सिफारिश की जाती है">✓ Advance booking recommended</li>
+                            <li data-en="50% payment at booking time" data-hi="बुकिंग के समय 50% भुगतान">✓ 50% payment at booking time</li>
+                            <li data-en="Balance due on check-in" data-hi="चेक-इन पर शेष राशि देय">✓ Balance due on check-in</li>
+                            <li data-en="Free cancellation up to 7 days" data-hi="7 दिन तक मुफ्त रद्दीकरण">✓ Free cancellation up to 7 days</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 data-en="Contact for Booking" data-hi="बुकिंग के लिए संपर्क करें">Contact for Booking</h3>
+                        <div class="contact-details">
+                            <p><strong data-en="Phone:" data-hi="फोन:">Phone:</strong> +91 XXXXX XXXXX</p>
+                            <p><strong data-en="Email:" data-hi="ईमेल:">Email:</strong> booking@shriShyamDharamshala.com</p>
+                            <p><strong data-en="WhatsApp:" data-hi="व्हाट्सएप:">WhatsApp:</strong> +91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p data-en="© 2024 Shri Shyam Dharamshala. Organized by Shri Shyam Baba Seva Mandal Trust. All rights reserved." data-hi="© 2024 श्री श्याम धर्मशाला। श्री श्याम बाबा सेवा मंडल ट्रस्ट द्वारा संचालित। सर्वाधिकार सुरक्षित।">
+                © 2024 Shri Shyam Dharamshala. Organized by Shri Shyam Baba Seva Mandal Trust. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="accomodations.js"></script>
+</body>
+</html>

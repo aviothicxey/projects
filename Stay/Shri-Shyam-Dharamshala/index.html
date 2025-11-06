@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shri Shyam Dharamshala - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="logo" aria-hidden="true">
+                <span class="logo-icon">🙏</span>
+                <span class="logo-text">Shri Shyam</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu" role="navigation" aria-label="Main">
+                <a href="#home" class="nav-link active" data-en="Home" data-hi="होम">Home</a>
+                <a href="#about" class="nav-link" data-en="About Us" data-hi="हमारे बारे में">About Us</a>
+                <a href="#accommodations" class="nav-link" data-en="Accommodations" data-hi="आवास सुविधाएँ">Accommodations</a>
+                <a href="#attractions" class="nav-link" data-en="Attractions" data-hi="पास के दर्शनीय स्थल">Attractions</a>
+                <!-- <a href="#gallery" class="nav-link" data-en="Gallery" data-hi="गैलरी">Gallery</a> -->
+                <a href="#donations" class="nav-link" data-en="Donations" data-hi="दान">Donations</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-hi="संपर्क करें">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle" title="Toggle Language" aria-label="Toggle language" aria-pressed="false">
+                    <span class="lang-icon">🌐</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="hero-title" data-en="Welcome to Shri Shyam Dharamshala" data-hi="श्री श्याम धर्मशाला में आपका स्वागत है">
+                    Welcome to Shri Shyam Dharamshala
+                </h1>
+                <p class="hero-subtitle" data-en="A sacred abode of devotion and hospitality near Chukanadham Temple" data-hi="चुकनाधाम मंदिर के पास भक्ति और आतिथ्य का पवित्र स्थान">
+                    A sacred abode of devotion and hospitality near Chukanadham Temple
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-en="Book Now" data-hi="अभी बुक करें">Book Now</button>
+                    <button class="btn btn-secondary" data-en="Explore More" data-hi="और जानें">Explore More</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-placeholder" aria-hidden="true">
+                    <span>🏛️</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aarti Timer -->
+        <div class="aarti-timer container" role="status" aria-live="polite">
+            <div class="timer-content">
+                <span class="timer-label" data-en="⏰ Next Aarti" data-hi="⏰ अगली आरती">⏰ Next Aarti</span>
+                <span class="timer-time" id="aartiTime">06:00 AM</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="highlights" id="about">
+        <div class="container">
+            <h2 class="section-title" data-en="Why Choose Us" data-hi="हमें क्यों चुनें">Why Choose Us</h2>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">📍</div>
+                    <h3 class="highlight-title" data-en="Perfect Location" data-hi="उपयुक्त स्थान">Perfect Location</h3>
+                    <p class="highlight-desc" data-en="Just 1.8 km from Chukanadham Temple, easily accessible" data-hi="चुकनाधाम मंदिर से केवल 1.8 किमी — आसानी से पहुँच योग्य">Just 1.8 km from Chukanadham Temple, easily accessible</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🛏️</div>
+                    <h3 class="highlight-title" data-en="Comfortable Rooms" data-hi="आरामदायक कमरे">Comfortable Rooms</h3>
+                    <p class="highlight-desc" data-en="Modern amenities with traditional warmth and care" data-hi="परंपरागत स्वागत और आधुनिक सुविधाएँ">Modern amenities with traditional warmth and care</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🤝</div>
+                    <h3 class="highlight-title" data-en="24/7 Service" data-hi="24/7 सेवा">24/7 Service</h3>
+                    <p class="highlight-desc" data-en="Dedicated staff always ready to help you" data-hi="समर्पित कर्मचारी आपकी सहायता के लिए सदैव तत्पर">Dedicated staff always ready to help you</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🧘</div>
+                    <h3 class="highlight-title" data-en="Spiritual Atmosphere" data-hi="आध्यात्मिक वातावरण">Spiritual Atmosphere</h3>
+                    <p class="highlight-desc" data-en="Peaceful spaces for meditation and prayer" data-hi="ध्यान और प्रार्थना के लिए शांत वातावरण">Peaceful spaces for meditation and prayer</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">✨</div>
+                    <h3 class="highlight-title" data-en="Premium Facilities" data-hi="उत्तम सुविधाएँ">Premium Facilities</h3>
+                    <p class="highlight-desc" data-en="AC/Fan, Prayer Hall, Dining Area" data-hi="एसी/पंखा, प्रार्थना कक्ष, भोजन व्यवस्था">AC/Fan, Prayer Hall, Dining Area</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">💚</div>
+                    <h3 class="highlight-title" data-en="Trust Managed" data-hi="ट्रस्ट द्वारा प्रबंधित">Trust Managed</h3>
+                    <p class="highlight-desc" data-en="Operated by Shri Shyam Baba Seva Mandal Trust" data-hi="श्री श्याम बाबा सेवा मंडल ट्रस्ट द्वारा संचालित">Operated by Shri Shyam Baba Seva Mandal Trust</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section class="facilities" id="accommodations">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Facilities" data-hi="हमारी सुविधाएँ">Our Facilities</h2>
+            
+            <div class="facilities-grid">
+                <!-- <div class="facility-item">
+                    <div class="facility-icon">📡</div>
+                    <h4 data-en="High-Speed WiFi" data-hi="उच्च गति वाईफाई">High-Speed WiFi</h4>
+                </div> -->
+                <div class="facility-item">
+                    <div class="facility-icon">❄️</div>
+                    <h4 data-en="AC & Fan" data-hi="एसी और पंखा">AC & Fan</h4>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🍽️</div>
+                    <h4 data-en="Dining Area" data-hi="भोजन क्षेत्र">Dining Area</h4>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🙏</div>
+                    <h4 data-en="Prayer Hall" data-hi="प्रार्थना कक्ष">Prayer Hall</h4>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🚿</div>
+                    <h4 data-en="Water" data-hi="पानी"> Water</h4>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🔒</div>
+                    <h4 data-en="24/7 Security" data-hi="24/7 सुरक्षा">24/7 Security</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK LINKS SECTION -->
+    <section class="quick-links" id="attractions">
+        <div class="container">
+            <h2 class="section-title" data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h2>
+            
+            <div class="quick-links-grid">
+                <a href="#accommodations" class="quick-link-card">
+                    <div class="quick-link-icon">🛏️</div>
+                    <h3 data-en="Check Rooms" data-hi="कमरे देखें">Check Rooms</h3>
+                </a>
+                <a href="#attractions" class="quick-link-card">
+                    <div class="quick-link-icon">🗺️</div>
+                    <h3 data-en="Nearby Places" data-hi="पास के स्थान">Nearby Places</h3>
+                </a>
+                <a href="#gallery" class="quick-link-card">
+                    <div class="quick-link-icon">📸</div>
+                    <h3 data-en="Gallery" data-hi="गैलरी">Gallery</h3>
+                </a>
+                <a href="#contact" class="quick-link-card">
+                    <div class="quick-link-icon">📞</div>
+                    <h3 data-en="Contact Us" data-hi="हमसे संपर्क करें">Contact Us</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <p data-en="© 2024 Shri Shyam Dharamshala. Organized by Shri Shyam Baba Seva Mandal Trust. All rights reserved." data-hi="© 2024 श्री श्याम धर्मशाला। श्री श्याम बाबा सेवा मंडल ट्रस्ट द्वारा संचालित। सर्वाधिकार सुरक्षित।">
+                © 2024 Shri Shyam Dharamshala. Organized by Shri Shyam Baba Seva Mandal Trust. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
