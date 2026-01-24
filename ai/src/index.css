@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Varela+Round&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark(&:where(.dark, .dark *));
+
+*{
+font-family: "Manrope", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 500;
+  /* font-style: normal; */
+}
+@theme{
+  --color-primary: #5044e5;
+}
