@@ -8,4 +8,12 @@
     width : 100%;
     height : 100vh;
     background-color: beige;
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+}
+.calculator{
+    padding: 20px;
+    background: black;
+    border-radius: 10px;
 }
