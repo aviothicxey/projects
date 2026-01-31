@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Shri Shyam Dharamshala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global-styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo"><div class="logo-icon">🕉️</div><div class="logo-text"><h1>Shri Shyam</h1><p>Dharamshala</p></div></div>
+            <div class="header-controls">
+                <button class="lang-toggle" onclick="toggleLanguage()">🌐 English</button>
+                <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+                <div class="font-controls">
+                    <button class="font-btn" onclick="decreaseFont()">A−</button>
+                    <button class="font-btn" onclick="resetFont()">A</button>
+                    <button class="font-btn" onclick="increaseFont()">A+</button>
+                </div>
+            </div>
+        </div>
+        <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+        <nav id="nav-menu">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="accommodations.html" class="nav-link">Accommodations</a>
+            <a href="attractions.html" class="nav-link">Attractions</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="donations.html" class="nav-link">Donations</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-grid" style="margin-top: 3rem;">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <h4>Location</h4>
+                        <p>Shri Shyam Dharamshala<br>Near Chukanadham Temple<br>Spiritual Lane, Temple District<br>City, State 123456, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+91-XXXX-XXX-XXXX">+91 XXXX XXX XXXX</a><br>Mon-Sun: 8:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-text">
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/91XXXXXXXXXX" target="_blank">Message us on WhatsApp</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@shriisyamdharamshala.in">info@shriisyamdharamshala.in</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-embed">
+                <iframe width="100%" height="400" style="border:0; border-radius: 12px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5678901234567!2d77.123456!3d28.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd123456789a%3A0xabcdef1234567890!2sChukanadham%20Temple!5e0!3m2!1sen!2sin!4v1234567890123" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="contact-form-box">
+            <h3>Quick Contact Form</h3>
+            <form onsubmit="handleContactForm(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Message *</label>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h4>About</h4><ul><li><a href="about.html">About</a></li></ul></div>
+            <div class="footer-section"><h4>Services</h4><ul><li><a href="accommodations.html">Book</a></li></ul></div>
+            <div class="footer-section"><h4>Support</h4><ul><li><a href="donations.html">Donate</a></li></ul></div>
+            <div class="footer-section"><h4>Contact</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Shri Shyam Dharamshala</p></div>
+    </footer>
+    <script src="../js/theme.js"></script><script src="../js/accessibility.js"></script><script src="../js/menu.js"></script>
+    <script>
+        function handleContactForm(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond within 24 hours.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

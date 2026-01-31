@@ -1,0 +1,69 @@
+/* ===== DONATIONS PAGE STYLES ===== */
+
+.donation-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donation-container > p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.donation-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.benefit {
+    background: var(--warm-white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.benefit-title {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.donation-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.method {
+    background: var(--warm-white);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.method h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.method p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .donation-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-methods {
+        grid-template-columns: 1fr;
+    }
+}

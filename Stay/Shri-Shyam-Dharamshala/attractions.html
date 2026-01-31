@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions | Shri Shyam Dharamshala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global-styles.css">
+    <link rel="stylesheet" href="../css/attractions-styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-icon">🕉️</div>
+                <div class="logo-text">
+                    <h1>Shri Shyam</h1>
+                    <p>Dharamshala</p>
+                </div>
+            </div>
+            <div class="header-controls">
+                <button class="lang-toggle" onclick="toggleLanguage()">🌐 English</button>
+                <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+                <div class="font-controls">
+                    <button class="font-btn" onclick="decreaseFont()">A−</button>
+                    <button class="font-btn" onclick="resetFont()">A</button>
+                    <button class="font-btn" onclick="increaseFont()">A+</button>
+                </div>
+            </div>
+        </div>
+        <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+        <nav id="nav-menu">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="accommodations.html" class="nav-link">Accommodations</a>
+            <a href="attractions.html" class="nav-link active">Attractions</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="donations.html" class="nav-link">Donations</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <section class="section alt">
+        <h2>Nearby Attractions</h2>
+        <div class="attractions-grid" style="margin-top: 3rem;">
+            <div class="attraction-card">
+                <h4>🏛️ Chukanadham Temple</h4>
+                <p class="attraction-distance">0.5 KM away</p>
+                <p>The sacred Chukanadham Temple is a renowned spiritual destination with beautiful architecture. Visit during morning and evening aarti ceremonies for a transformative experience.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🕉️ Shri Radha Krishna Temple</h4>
+                <p class="attraction-distance">2 KM away</p>
+                <p>A beautifully maintained temple dedicated to Radha Krishna with regular puja ceremonies and meditation halls perfect for peaceful contemplation.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🌳 Riverside Spiritual Walk</h4>
+                <p class="attraction-distance">1 KM away</p>
+                <p>Take a meditative walk along the peaceful riverside path. The natural beauty provides excellent opportunity for reflection and connection with nature.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>📚 Sacred History Museum</h4>
+                <p class="attraction-distance">3 KM away</p>
+                <p>Learn about the rich spiritual and cultural history of the region through artifacts, manuscripts, and displays about local temples and traditions.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🌾 Local Market & Ashram</h4>
+                <p class="attraction-distance">1.5 KM away</p>
+                <p>Experience authentic local culture at the traditional market. Several ashrams offer spiritual discourses and yoga classes for interested visitors.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🏔️ Viewpoint & Gardens</h4>
+                <p class="attraction-distance">2.5 KM away</p>
+                <p>A scenic viewpoint overlooking the region with beautiful gardens. Perfect for sunrise and sunset visits offering both spiritual inspiration and natural beauty.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul><li><a href="about.html">About Dharamshala</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul><li><a href="accommodations.html">Book a Room</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul><li><a href="donations.html">Donate</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul><li><a href="contact.html">Get in Touch</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shri Shyam Dharamshala | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

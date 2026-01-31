@@ -1,0 +1,52 @@
+/* ===== ABOUT PAGE STYLES ===== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-grid.reverse {
+    direction: rtl;
+}
+
+.about-grid.reverse > * {
+    direction: ltr;
+}
+
+.about-image {
+    background: linear-gradient(135deg, var(--primary), var(--gold));
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warm-white);
+    font-size: 5rem;
+    box-shadow: 0 8px 24px var(--shadow-lg);
+}
+
+.about-text h3 {
+    color: var(--primary);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid.reverse {
+        direction: ltr;
+    }
+
+    .about-image {
+        font-size: 3rem;
+    }
+}
