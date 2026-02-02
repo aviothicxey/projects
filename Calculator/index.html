@@ -8,10 +8,15 @@
 </head>
 <body>
     <div class="container">
+       
         <div class="calculator">
+             <div class="top-panel">
+            <button type ="button" class="history-btn" onclick="toggleHistory()">History</button>
+        </div>
             <form>
+               
                 <div class="display">
-                    <input type="text" name="display">
+                    <input type="text" name="display" id="display">
                 </div>
                 <div>
                 <input type="button" value="AC" onclick="display.value = ''" class="operator">
@@ -40,11 +45,64 @@
                 <div>
                 <input type="button" value="00" onclick="display.value += '00'">
                 <input type="button" value="0" onclick="display.value += '0'">
-                <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)">
+                <input type="button" value="=" class="equal operator" onclick="calculate()">
                 
                 </div>
             </form>
         </div>
+         <div class="history-panel" id="history-panel">
+                    <h3>History</h3>
+            <div class="history" id="history"></div>
+            </div>
     </div>
+  <script>
+    const display = document.getElementById("display");
+    const historyPanel = document.getElementById("history-panel");
+
+    function calculate(){
+        let expression = display.value;
+
+        try{
+            let result = eval(expression);
+
+            let historyDiv = document.getElementById("history");
+            let entry = document.createElement("div");
+            entry.innerText = expression + " = " + result;
+            historyDiv.appendChild(entry);
+
+            // localStorage save
+            let savedHistory = localStorage.getItem("calcHistory");
+            let historyArray = savedHistory ? JSON.parse(savedHistory) : [];
+            historyArray.push(expression + " = " + result);
+            localStorage.setItem("calcHistory", JSON.stringify(historyArray));
+
+            display.value = result;
+        }
+        catch{
+            display.value = "Error";
+        }
+    }
+
+    function toggleHistory(){
+        historyPanel.classList.toggle("active");
+    }
+
+    function loadHistory(){
+        let savedHistory = localStorage.getItem("calcHistory");
+        if(savedHistory){
+            let historyArray = JSON.parse(savedHistory);
+            let historyDiv = document.getElementById("history");
+
+            historyArray.forEach(item => {
+                let entry = document.createElement("div");
+                entry.innerText = item;
+                historyDiv.appendChild(entry);
+            });
+        }
+    }
+
+    window.onload = loadHistory;
+</script>
+
 </body>
 </html>

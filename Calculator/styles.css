@@ -49,3 +49,49 @@ form input.equal{
 form input.operator{
     color: aqua;
 }
+
+.history{
+    max-height: 600px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    text-align: justify;
+    font-size: 20px;
+    text-decoration-color: #f1e904;
+    
+}
+.history div{
+    margin : 6px 0;
+    color: #111;
+    border-bottom: 2px solid #111;
+}
+.top-panel{
+    display: flex;
+    justify-content: flex-end;
+}
+.history-btn{
+    background-color: transparent;
+    border: none;
+    color : aqua;
+    cursor :pointer;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.history-panel{
+    position: fixed;
+    top : 0;
+    right : -300px;
+    width : 300px;
+    height: 100vh;
+    background : #efeda7;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: right 0.3s ease;
+    font-size: 16px;
+}
+.history-panel h3{
+text-align: left;
+margin-bottom: 15px;
+}
+.history-panel.active{
+    right: 0;
+}
