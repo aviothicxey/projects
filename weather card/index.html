@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        <h2>Weather App</h2>
+
+        <input 
+            type="text" 
+            placeholder="Enter city name"
+            class="city-input"
+        >
+
+        <div class="weather-info">
+            <div class="temp">--°C</div>
+            <div class="condition">Condition</div>
+            <div class="location">City, Country</div>
+        </div>
+
+        <button class="check-btn">Check Weather</button>
+    </div>
+<script>
+    const input = document.querySelector(".city-input");
+    const button = document.querySelector(".check-btn");
+    const tempe = document.querySelector(".temp");
+    const conditione = document.querySelector(".condition");
+    const locatione = document.querySelector(".location");
+
+    const API_KEY = ""
+</script>
+</body>
+</html>
