@@ -1,6 +1,9 @@
-const userModel = require("../models/user.model");
+const user = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 const { validationResult} = require("express-validator");
+const generateToken = require("../utils/generateToken");
+
+// Sign up controller:
 async function signUp(req , res){
 
     // a request comes in --> Validate --> talk to db --> send the response back to client
@@ -37,25 +40,32 @@ async function signUp(req , res){
         // }  // this is no more required as we are using express validator for validation
 
         // create user:
-        const user = await User.create({
+        const user = await user.create({
             firstName,
             lastName,
             username,
             email,
-            password: undefined
+            password // this password will be hashed in the user model before saving to db
         })
+
+        const token = generateToken(user._id);
+        res.cookie("token" , token,{
+            httpOnly : true,
+            maxAge : 24 * 60 * 60 * 1000 // 1 dayyy
+        })
+// about api --> 201 --> sucess -> : A new resource has been created (successful POST request)
 
         return res.status(201).json({
             success : true,
             message : "User registered successfully",
-            user
+            user 
         })
     }catch(err){
         next(err);
-        }
+    }
     
     
-}
+};
 
 
 
