@@ -1,27 +1,42 @@
 const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
-
+const { validationResult} = require("express-validator");
 async function signUp(req , res){
+
+    // a request comes in --> Validate --> talk to db --> send the response back to client
     try{
+        // Validation errors:
+        const errors = validatrionResult(req);
+        if(!errors.isempty()){
+            return res.status(400).json({
+                success : false,
+                message : errors.array()
+            });
+        }
         const { name , email , password} = req.body;
+
+        // check is user with the same email or username already exits:
         const userAlrExist = await userModel.findOne({email});
         if(userAlrExist){
             return res.status(400).json({
+                success : false,
                 message : "User already exits with this email.Please login instead."
             })
         }
         const userNameAlrExist = await userModel.findOne({username});
         if(userNameAlrExist){
             return res.status(400).json({
+                success : false,
                 message : "User already exits with this username .Please login instead."
             })
         }
-        if(!name || !email || !password){
-            return res.status(400).json({
-                message : "Please provide all the required credentials."
-            })
-        }
+        // if(!name || !email || !password){
+        //     return res.status(400).json({
+        //         message : "Please provide all the required credentials."
+        //     })
+        // }  // this is no more required as we are using express validator for validation
 
+        // create user:
         const user = await User.create({
             firstName,
             lastName,
@@ -36,12 +51,9 @@ async function signUp(req , res){
             user
         })
     }catch(err){
-        return res.status(500).json({
-            success : false,
-            message : "Something went wrong while registering the user",
-            error : err.message
-        })
-    }
+        next(err);
+        }
+    
     
 }
 
