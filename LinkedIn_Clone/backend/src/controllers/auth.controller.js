@@ -51,7 +51,9 @@ async function signUp(req , res){
         const token = generateToken(user._id);
         res.cookie("token" , token,{
             httpOnly : true,
-            maxAge : 24 * 60 * 60 * 1000 // 1 dayyy
+            maxAge : 24 * 60 * 60 * 1000 ,// 1 dayyy
+            sameSite: "strict",
+            secure : process.env.NODE_ENV === "production"
         })
 // about api --> 201 --> sucess -> : A new resource has been created (successful POST request)
 
