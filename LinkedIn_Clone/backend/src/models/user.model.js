@@ -30,7 +30,51 @@ const UserSchema = new mongoose.Schema({
         required : [true , "Password is required"],
         minlength : [6, "Password must be at least 6 characters long"],
         select: false  // This will prevent the password from being returned in queries by default
-    }
+    },
+    profileImage : {
+        type: String,
+        default : "https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    coverImage : {
+        type: String,
+        default:""
+    },
+    headline:{
+        type : String,
+        default:""
+    },
+    skills : [{type : String}],
+
+    education:[
+        {
+            college : {type : String},
+            degree : { type : String},
+            fieldOfStudy : {type : String}
+        }
+    ],
+    location:{
+        type : String
+    },
+    gender:{
+        type : String,
+        enum : ["male" , "female" , "others"]
+    },
+
+    experince:[
+        {
+            title : {type : String},
+            company : {type : String},
+            description : {type : String}
+        }
+    ],
+
+    connection : [
+        {type : mongoose.Schema.Types.ObjectId,
+            ref : User
+        }
+    ]
+
+
 
 } , {timestamps:true});
 

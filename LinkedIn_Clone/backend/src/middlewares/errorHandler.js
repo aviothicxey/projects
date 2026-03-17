@@ -10,4 +10,29 @@ const errorHandler = (err, req, res, next) => {
         statusCode = 400;
     }
 
+    //Mongoose validation error
+    if(err.name === " ValidationError"){
+        message = Object.values(err.errors).map((val) => val.message).join(", ");
+        statusCode = 400;
+    }
+
+    //JWT errors:
+    if(err.name === "JsonWebTokenError"){
+        message: "Invalid token";
+        statusCode = 401;
+    }
+
+    if(err.name === "TokenExpiredError"){
+        message : "Token expired , Please login again";
+        statusCode = 401;
+    }
+
+    res.status(statusCode).json({
+    success: false,
+    message,
+    ...(process.env.NODE_ENV === "development" && { stack: err.stack }),
+  });
+
 }
+
+module.exports = errorHandler;
