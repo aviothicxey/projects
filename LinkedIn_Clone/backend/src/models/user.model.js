@@ -43,16 +43,16 @@ const UserSchema = new mongoose.Schema({
     coverImage: { type: String, default: "" },
     headline:   { type: String, default: "" },
     skills:     [{ type: String }],
-    education:  [educationSchema],      // ✅ subdocument schema (gets _id automatically)
-    experience: [experienceSchema],     // ✅ fixed typo
+    education:  [educationSchema],      
+    experience: [experienceSchema],     
     location:   { type: String },
     gender: {
         type: String,
         enum: ["male", "female", "others"]
     },
-    connections: [{                     // ✅ renamed + fixed ref
+    connections: [{                     
         type: mongoose.Schema.Types.ObjectId,
-        ref:  'User'                    // ✅ string, not undefined variable
+        ref:  'User'                    
     }]
 }, { timestamps: true });
 
@@ -63,7 +63,7 @@ UserSchema.pre("save", async function (next) {
     next();
 });
 
-// ⚠️ Remember: only works if query uses .select('+password')
+//Remember: only works if query uses .select('+password')
 UserSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
