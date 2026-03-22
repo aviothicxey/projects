@@ -13,6 +13,11 @@ authRouter.post('/signup' ,[
     body('password').isLength({min : 6}).withMessage("Password must be at least 6 characters long")
 ] , signUp);
 
+authRouter.post('/login' , [
+    body('email').isEmail().withMessage("Account with this email does not exist , try signing up"),
+    body('password').notEmpty().withMessage("Enter correct password"),
+] , login);
+
 
 
 

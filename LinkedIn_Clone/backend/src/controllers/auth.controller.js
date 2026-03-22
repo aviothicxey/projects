@@ -38,7 +38,7 @@ async function signUp(req , res , next){
         //         message : "Please provide all the required credentials."
         //     })
         // }  // this is no more required as we are using express validator for validation
-
+        
         // create user:
         const newUser = await User.create({
             firstName,
@@ -67,6 +67,22 @@ async function signUp(req , res , next){
     }
     
     
+};
+
+async function login(req , res , next){
+    try{
+        // Validation errors:
+        const errors = validationresult(req);
+        if(!errors.isEmpty()){
+            return res.status(400).json({
+                success : false,
+                errors : errors.array()
+            });
+        }
+        const {email,username , password} = req.body;
+    }catch(err){
+        next(err);
+    }
 };
 
 
