@@ -64,9 +64,7 @@ async function signUp(req , res , next){
         })
     }catch(err){
         next(err);
-    }
-    
-    
+    }    
 };
 
 async function login(req , res , next){
@@ -74,12 +72,29 @@ async function login(req , res , next){
         // Validation errors:
         const errors = validationresult(req);
         if(!errors.isEmpty()){
+      //about api --> 400 --> invalid req body or missing parameters in request
             return res.status(400).json({
                 success : false,
                 errors : errors.array()
             });
         }
         const {email,username , password} = req.body;
+        // check if user with the email exists or not:
+        const user = awaitUser.findOne({email}).select("+password");
+        if(!user){
+            return res.stattus(400).json({
+                success : false,
+                message : "Invalid email or password"
+            });
+        }
+// check is password is correct by comparing the hashed password in db with the password provided by user:
+        const isMatch = await user.matchPassword(password);
+        if(!isMatch){
+            return res.status(401).json({
+                success : false,
+                message : " Invalid email or password"
+            })
+        }
     }catch(err){
         next(err);
     }
