@@ -1,6 +1,7 @@
 const express = require('express');
 const authRouter = require('./routes/auth.route');
 const { cookie } = require('express-validator');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
