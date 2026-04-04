@@ -48,7 +48,7 @@ async function signUp(req , res , next){
             password // this password will be hashed in the user model before saving to db
         })
 
-        const token = generateToken(User._id);
+        const token = generateToken(newUser._id);
         res.cookie("token" , token,{
             httpOnly : true,
             maxAge : 24 * 60 * 60 * 1000 ,// 1 dayyy
@@ -60,7 +60,7 @@ async function signUp(req , res , next){
         return res.status(201).json({
             success : true,
             message : "User registered successfully",
-            User 
+            newUser 
         })
     }catch(err){
         next(err);
@@ -82,7 +82,7 @@ async function login(req , res , next){
         // check if user with the email exists or not:
         const user = await User.findOne({email}).select("+password");
         if(!user){
-            return res.stattus(400).json({
+            return res.status(400).json({
                 success : false,
                 message : "Invalid email or password"
             });
@@ -95,7 +95,7 @@ async function login(req , res , next){
                 message : " Invalid email or password"
             });
         }
-                const token = generateToken(User._id);
+                const token = generateToken(user._id);
                 res.cookie("token" , token,{
                 httpOnly : true,
                 maxAge : 24 * 60 * 60 * 1000 ,// 1 dayyy
@@ -105,7 +105,7 @@ async function login(req , res , next){
         return res.status(200).json({
             success : true,
             message : "User logged in successfully",
-            User
+            user
         });
     }catch(err){
         next(err);

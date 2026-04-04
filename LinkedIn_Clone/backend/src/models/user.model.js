@@ -38,7 +38,7 @@ const UserSchema = new mongoose.Schema({
     },
     profileImage: {
         type:    String,
-        default: "https://img.freepik.com/..."
+        default: ""
     },
     coverImage: { type: String, default: "" },
     headline:   { type: String, default: "" },
