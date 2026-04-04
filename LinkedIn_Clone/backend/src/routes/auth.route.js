@@ -1,7 +1,7 @@
 const express = require('express');
 
 const authRouter = express.Router();
-const {signUp,login} = require('../controllers/auth.controller');
+const {signUp,login,logout} = require('../controllers/auth.controller');
 const {body} = require('express-validator');
 
 authRouter.post('/signup' ,[
@@ -17,6 +17,8 @@ authRouter.post('/login' , [
     body('email').isEmail().withMessage("Account with this email does not exist , try signing up"),
     body('password').notEmpty().withMessage("Enter correct password"),
 ] , login);
+
+authRouter.post('/logout' , logout);
 
 
 
