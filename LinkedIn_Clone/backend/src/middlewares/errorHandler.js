@@ -1,3 +1,4 @@
+// File: backend/src/middlewares/errorHandler.js
 const errorHandler = (err, req, res, next) => {
     let statusCode = err.statusCode || 500;
     let message = err.message || "Internal Server Error";
@@ -18,12 +19,12 @@ const errorHandler = (err, req, res, next) => {
 
     //JWT errors:
     if(err.name === "JsonWebTokenError"){
-        message: "Invalid token";
+        message = "Invalid token";
         statusCode = 401;
     }
 
     if(err.name === "TokenExpiredError"){
-        message : "Token expired , Please login again";
+        message = "Token expired , Please login again";
         statusCode = 401;
     }
 

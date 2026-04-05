@@ -1,3 +1,4 @@
+// File: backend/src/db/db.js
 const mongoose = require('mongoose');
 
 async function connectDB(){

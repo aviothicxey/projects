@@ -1,5 +1,6 @@
+// File: backend/src/routes/auth.route.js
 const express = require('express');
-
+const verifyToken = require('../middlewares/verifyToken');
 const authRouter = express.Router();
 const {signUp,login,logout} = require('../controllers/auth.controller');
 const {body} = require('express-validator');
@@ -18,7 +19,7 @@ authRouter.post('/login' , [
     body('password').notEmpty().withMessage("Enter correct password"),
 ] , login);
 
-authRouter.post('/logout' , logout);
+authRouter.post('/logout' , verifyToken, logout);
 
 
 

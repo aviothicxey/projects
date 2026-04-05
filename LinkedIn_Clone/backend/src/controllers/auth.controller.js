@@ -1,3 +1,4 @@
+// File: backend/src/controllers/auth.controller.js
 const User = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 const { validationResult} = require("express-validator");

@@ -1,3 +1,4 @@
+// File: frontend/src/pages/SignUp.jsx
 import React, { useState } from 'react'
 import logo from "../assets/logo.svg"
 import { useNavigate } from 'react-router-dom'
