@@ -15,6 +15,8 @@ function Signup() {
   let[email, setEmail] = useState("")
   let[password, setPassword] = useState("")
   let[loading , setloading] = useState(false)
+  let [error, setError]=useState("");
+  
  
   const handleSignUp = async(e) =>{
 
@@ -31,7 +33,9 @@ function Signup() {
 
       } , {withCredentials: true})
       console.log(result.data)
+      setError("")
       setloading(false)
+      
       setFirstName("")
       setLastName("")
       setUsername("")
@@ -39,9 +43,17 @@ function Signup() {
       setPassword("")
 
     }catch(err){
-      console.log(err.response.data);
-      setloading(false)
-    }
+        const errData = err?.response?.data?.message
+  
+  // Handle both array (validation errors) and string errors
+  if (Array.isArray(errData)) {
+    setError(errData.map(e => e.msg).join(", "))
+  } else {
+    setError(errData || "Something went wrong, try again later")
+  }
+  
+  setloading(false)
+}
   }
 
   return (
@@ -53,7 +65,7 @@ function Signup() {
       </div>
 
       {/* FORM */}
-      <form className='w-[90%] max-w-[400px] h-[600px] shadow-xl flex flex-col justify-center gap-[10px] p-[20px] rounded-md bg-[#e6ecef]' onSubmit={handleSignUp}>
+      <form className='w-[90%] max-w-[400px] min-h-[600px] shadow-xl flex flex-col justify-center gap-[10px] p-[20px] rounded-md bg-[#e6ecef]' onSubmit={handleSignUp}>
         
         <h1 className='text-gray-800 text-[30px] font-semibold mb-[20px]'>
           Sign Up
@@ -111,6 +123,10 @@ function Signup() {
           </span>
 
         </div>
+
+        {error && <p className='text-red-500'>
+          {error}
+          </p>}
 
         {/* BUTTON */}
         <button 
